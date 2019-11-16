@@ -29,7 +29,7 @@
                 <div class="row mb-5">
                     <div class="col-lg-4 lebarbtn col-sm-6 mb-4"
                         v-for="(item, index) in BusinessManagement" :key="index">
-                        <button class="list-group-item" :id="'item'+item.id" :value="item.name"  @click="filter(item.id, item.name)" >{{item.name}}</button>
+                        <button :title="item.name" class="list-group-item" :id="'item'+item.id" :value="item.name"  @click="filter(item.id, item.name)" >{{item.name}}</button>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 <div class="row mb-5">
                     <div class="col-lg-4 lebarbtn col-sm-6 mb-4"
                         v-for="(item, index) in digitalStrategic" :key="index">
-                        <button class="list-group-item" :id="'item'+item.id" :value="item.name"  @click="filter(item.id, item.name)" >{{item.name}}</button>
+                        <button :title="item.name" class="list-group-item" :id="'item'+item.id" :value="item.name"  @click="filter(item.id, item.name)" >{{item.name}}</button>
                     </div>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                 <div class="row mb-5">
                     <div class="col-lg-4 lebarbtn col-sm-6 mb-4"
                         v-for="(item, index) in digitalActivation" :key="index">
-                        <button class="list-group-item" :id="'item'+item.id" :value="item.name"  @click="filter(item.id, item.name)" >{{item.name}}</button>
+                        <button :title="item.name" class="list-group-item" :id="'item'+item.id" :value="item.name"  @click="filter(item.id, item.name)" >{{item.name}}</button>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                 <div class="row mb-5">
                     <div class="col-lg-4 lebarbtn col-sm-6 mb-4"
                         v-for="(item, index) in webmobileDev" :key="index">
-                        <button class="list-group-item" :id="'item'+item.id" :value="item.name"  @click="filter(item.id, item.name)" >{{item.name}}</button>
+                        <button :title="item.name" class="list-group-item" :id="'item'+item.id" :value="item.name"  @click="filter(item.id, item.name)" >{{item.name}}</button>
                     </div>
                 </div>
             </div>
@@ -89,7 +89,7 @@
                 <div class="row mb-5">
                     <div class="col-lg-4 lebarbtn col-sm-6 mb-4"
                         v-for="(item, index) in cyberSecurity" :key="index">
-                        <button class="list-group-item" :id="'item'+item.id" :value="item.name"  @click="filter(item.id, item.name)" >{{item.name}}</button>
+                        <button :title="item.name" class="list-group-item" :id="'item'+item.id" :value="item.name"  @click="filter(item.id, item.name)" >{{item.name}}</button>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
                 <div class="row mb-5">
                     <div class="col-lg-4 lebarbtn col-sm-6 mb-4"
                         v-for="(item, index) in creativ" :key="index">
-                        <button class="list-group-item" :id="'item'+item.id" :value="item.name"  @click="filter(item.id, item.name)" >{{item.name}}</button>
+                        <button :title="item.name" class="list-group-item" :id="'item'+item.id" :value="item.name"  @click="filter(item.id, item.name)" >{{item.name}}</button>
                     </div>
                 </div>
             </div>
@@ -302,6 +302,10 @@
         visibility: hidden !important;
     }
 
+    .list-group-item:first-child{
+        border-radius: 10px;
+    }
+
     .list-group-item{
         margin-bottom: 0;
         border-bottom: 0;
@@ -316,6 +320,8 @@
         width: 100%;
         font-size: 12pt;
         font-weight: bold;
+        transform: skewX(-10deg); /* Standard syntax */
+
     }
 
     .judul_btn {
@@ -332,24 +338,99 @@
         cursor: pointer;
     }
 
-    @media (min-width:320px) and (max-width: 575px) {
-    .lebarbtn{
-            width: 50%;
+    /* tooltip */
+    .tooltip {
+        display: inline;
+        position: relative;
     }
-    .list-group-item{
-        margin-bottom: 0;
-        border-bottom: 0;
-        text-align: center;
-        background: #e4e2e2;
-        box-shadow: 0px 2px 6px #9e9e9e;
+    .tooltip:hover:after{
+        display: -webkit-flex;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-justify-content: center;
         justify-content: center;
-        height: 120px;
-        width: 100%;
-        font-size: 12pt;
-        font-weight: bold;
+        background: #444;
+        border-radius: 8px;
+        color: #fff;
+        content: attr(title);
+        margin: -82px auto 0;
+        font-size: 16px;
+        padding: 13px;
+        width: 220px;
     }
+    .tooltip:hover:before{
+        border: solid;
+        border-color: #444 transparent;
+        border-width: 12px 6px 0 6px;
+        content: "";
+        left: 45%;
+        bottom: 30px;
+        position: absolute;
+    }
+
+    @media (min-width: 992px){
+        .bg-form-service-email {
+            margin-right: 100px !important;
+            margin-left: 100px !important;
+        }
+        .teks-header-explore {
+            font-size: 25px !important;
+        }
+        .teks-btn-bisnis, .teks-btn-digital-strategic, .teks-btn-digital-activation, .teks-btn-development, .teks-btn-security, .teks-btn-creative{
+            font-size: 25px !important;
+            height: 3em !important;
+        }
+        .teks-header-service-email{
+            font-size: 25px !important;
+        }
+        .teks-explore{
+            font-size: 25px !important;
+        }
+        .form-service, .form-service2, .form-service3{
+            font-size: 17px !important;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 991px){
+        .bg-form-service-email {
+            /* margin-right: 100px !important;
+            margin-left: 100px !important; */
+        }
+        .teks-header-explore {
+            font-size: 25px !important;
+        }
+        .teks-btn-bisnis, .teks-btn-digital-strategic, .teks-btn-digital-activation, .teks-btn-development, .teks-btn-security, .teks-btn-creative{
+            font-size: 25px !important;
+            height: 3em !important;
+        }
+        .teks-header-service-email{
+            font-size: 17px !important;
+        }
+        .teks-explore{
+            font-size: 17px !important;
+        }
+        .form-service, .form-service2, .form-service3{
+            font-size: 17px !important;
+        }
+    }
+
+    @media (min-width:320px) and (max-width: 575px) {
+        .lebarbtn{
+                width: 50%;
+        }
+        .list-group-item{
+            margin-bottom: 0;
+            border-bottom: 0;
+            text-align: center;
+            background: #e4e2e2;
+            box-shadow: 0px 2px 6px #9e9e9e;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            width: 100%;
+            font-size: 12pt;
+            font-weight: bold;
+        }
     }
 </style>

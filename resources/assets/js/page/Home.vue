@@ -5,26 +5,119 @@
             <Menu/>
 
             <div class="bg-banner">
-                <div class="row">
-                    <div class="col-lg-5 col-xl-5 col-md-12 home-banner">
-                        <div class="teks">
-                            You're in the right time, <br>
-                            and the right place <br>
-                            to get the best solution
-                        </div>
-                        <div class="bg-button-teks">
-                            <router-link to="service">
-                            <button class="button-teks">START YOUR JOURNEY</button>
-                            </router-link>
-                        </div>
-                        <div class="nama-pt">
-                            PT Lokkali Cipta Indonesia
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-xl-7 slide-banner">
-                        <img class="img-slider"  src="../../img/slide_banner.png" alt="">
-                    </div>
-                </div>
+                <!-- carousel pc -->
+                    <carousel :loop="true" :autoplay="true" :autoplayTimeout="5000" :perPage="1" class="caro-list-jumbotron-pc">
+                        <slide>
+                            <div class="row">
+                                <div class="col-lg-5 col-xl-5 col-md-12 home-banner">
+                                    <div class="teks">
+                                        You're in the right time, <br>
+                                        and the right place <br>
+                                        to get the best solution <br>
+                                    </div>
+                                    <div class="bg-button-teks">
+                                        <router-link to="service">
+                                        <button class="button-teks">START YOUR JOURNEY</button>
+                                        </router-link>
+                                    </div>
+                                    <div class="nama-pt">
+                                        PT Lokkali Cipta Indonesia
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-xl-7 slide-banner">
+                                    <img class="img-slider"  src="../../img/slide_banner.png" alt="">
+                                </div>
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="row">
+                                <div class="col-lg-5 col-xl-5 col-md-12 home-banner">
+                                    <div class="teks">
+                                        You're in the right time, <br>
+                                        and the right place <br>
+                                        to get the best solution
+                                    </div>
+                                    <div class="bg-button-teks">
+                                        <router-link to="service">
+                                        <button class="button-teks">START YOUR JOURNEY</button>
+                                        </router-link>
+                                    </div>
+                                    <div class="nama-pt">
+                                        PT Lokkali Cipta Indonesia
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-xl-7 slide-banner">
+                                    <img class="img-slider"  src="../../img/wolf.png" alt="">
+                                </div>
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="row">
+                                <div class="col-lg-5 col-xl-5 col-md-12 home-banner">
+                                    <div class="teks">
+                                        You're in the right time, <br>
+                                        and the right place <br>
+                                        to get the best solution
+                                    </div>
+                                    <div class="bg-button-teks">
+                                        <router-link to="service">
+                                        <button class="button-teks">START YOUR JOURNEY</button>
+                                        </router-link>
+                                    </div>
+                                    <div class="nama-pt">
+                                        PT Lokkali Cipta Indonesia
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 col-xl-7 slide-banner">
+                                    <img class="img-slider"  src="../../img/thanos.png" alt="">
+                                </div>
+                            </div>
+                        </slide>
+                    </carousel>
+                <!-- end -->
+                <!-- carousel smartphone -->
+                    <carousel :loop="true" :autoplay="true" :autoplayTimeout="5000" :perPage="1" class="caro-list-jumbotron-smartphone">
+                        <slide>
+                            <div class="slide-banner">
+                                <img class="img-slider"  src="../../img/slide_banner.png" alt="">
+                                <div class="teks">
+                                    You're in the right time,
+                                    and the right place
+                                    to get the best solution <br>
+                                    <router-link to="service">
+                                    <button class="button-teks">START YOUR JOURNEY</button>
+                                    </router-link>
+                                </div>
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="slide-banner">
+                                <img class="img-slider"  src="../../img/wolf.png" alt="">
+                                <div class="teks">
+                                    You're in the right time,
+                                    and the right place
+                                    to get the best solution <br>
+                                    <router-link to="service">
+                                    <button class="button-teks">START YOUR JOURNEY</button>
+                                    </router-link>
+                                </div>
+                            </div>
+                        </slide>
+                        <slide>
+                            <div class="slide-banner">
+                                <img class="img-slider"  src="../../img/thanos.png" alt="">
+                                <div class="teks">
+                                    You're in the right time,
+                                    and the right place
+                                    to get the best solution <br>
+                                    <router-link to="service">
+                                    <button class="button-teks">START YOUR JOURNEY</button>
+                                    </router-link>
+                                </div>
+                            </div>
+                        </slide>
+                    </carousel>
+                <!-- end -->
             </div>
 
         </div>
@@ -204,14 +297,50 @@ import { Carousel, Slide } from 'vue-carousel';
 </script>
 
 <style>
+    .homepage-header-background{
+        font-style: normal;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: unset !important;
+        margin-left: -15px;
+    }
     @media(min-width: 992px) {
-        .caro-list{
+        .caro-list, .caro-list-jumbotron-smartphone{
             display: none;
+        }
+
+        .teks-header-about{
+            font-size: 25px !important;
+        }
+        .teks-about, .text-icon-why {
+            font-size: 17px !important;
+            font-weight: normal !important;
+        }
+        .teks-service, .moreinfo-service, .teks-why {
+            font-size: 25px !important;
+        }
+        .text-icon-service{
+            font-size: 16px !important;
         }
     }
     @media(max-width: 991px){
-        .lokali-list{
+        .lokali-list, .caro-list-jumbotron-pc{
             display: none;
+        }
+        .teks-header-about{
+            font-size: 25px !important;
+        }
+        .teks-about, .text-icon-why {
+            font-size: 17px !important;
+            font-weight: normal !important;
+        }
+        .teks-service, .moreinfo-service, .teks-why {
+            font-size: 25px !important;
+        }
+        .text-icon-service{
+            font-size: 16px !important;
         }
         .footer{
             text-align: center !important;

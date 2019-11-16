@@ -163,6 +163,7 @@
 <script>
     // var SITEURL = '{{URL::to('')}}';
     var api = "{{ env('API_URL') }}";
+    console.log(api);
     $(document).ready(function () {
         $.ajaxSetup({
             headers: {
@@ -267,7 +268,7 @@
 
                 $.ajax({
                     data: $('#userForm').serialize(),
-                    url: api+"tambahTeknisi",
+                    url: api+"admin/tambahTeknisi",
                     type: "POST",
                     dataType: 'json',
                     success: function (data) {
@@ -301,13 +302,11 @@
                     cache: false,
                     dataType: "json",
                     success: function (data) {
-
                         $('#userForm2').trigger("reset");
                         $('#ajax-crudedit-modal').modal('hide');
                         $('#btn-save2').html('Save Changes');
                         var oTable = $('#user-table').dataTable();
                         oTable.fnDraw(false);
-
                     },
                     error: function (data) {
                         console.log('Error:', data);

@@ -4,10 +4,10 @@
             <Menu />
         </div>
 
-        <div class="myblog">
+        <div class="mycase">
             <div class="row">
                 <div class="col-lg-12">
-                        <div class="teks-header-myblog">
+                        <div class="teks-header-mycase">
                             Portfolio
                         </div>
                 </div>
@@ -314,6 +314,48 @@
 
 
 <style>
+    @media (min-width: 992px){
+        .mycase {
+            margin-bottom: 40px;
+        }
+        .teks-header-mycase{
+            font-size: 25px !important;
+            font-weight: bolder;
+            font-style: italic;
+            text-align: center;
+            line-height: 40px;
+            color: #138568;
+            margin-bottom: 40px;
+        }
+        .text-isi-case-popular{
+            font-size: 17px !important;
+            font-weight: normal !important;
+        }
+        .form-search-portfolio{
+            font-size: 17px !important;
+        }
+    }
+    @media (max-width: 991px){
+        .mycase {
+            margin-bottom: 40px;
+        }
+        .teks-header-mycase{
+            font-size: 25px !important;
+            font-weight: bolder;
+            font-style: italic;
+            text-align: center;
+            line-height: 40px;
+            color: #138568;
+            margin-bottom: 40px;
+        }
+        .text-isi-case-popular{
+            font-size: 17px !important;
+            font-weight: normal !important;
+        }
+        .form-search-portfolio{
+            font-size: 17px !important;
+        }
+    }
     .m-pagination{
         margin-bottom:40px;
     }

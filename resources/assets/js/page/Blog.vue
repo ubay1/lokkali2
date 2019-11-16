@@ -41,15 +41,15 @@
         </transition>
         </div>
 
-        <div class="case-panel-popular">
+        <div class="blog-panel-popular">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="bg-img-case-popular">
-                            <img class="img-case-popular col-md-8" v-lazy="this.allblogpopuler.gambar" :key="this.allblogpopuler.gambar" alt="">
-                            <div class="text-head-case col-md-4">
+                        <div class="bg-img-blog-popular">
+                            <img class="img-blog-popular col-md-8" v-lazy="this.allblogpopuler.gambar" :key="this.allblogpopuler.gambar" alt="">
+                            <div class="text-head-blog col-md-4">
                                 {{ this.allblogpopuler.judul }}
-                                <div class="text-isi-case-popular">
+                                <div class="text-isi-blog-popular">
                                    {{ this.allblogpopuler.isi }}
                                 </div>
                                 <!-- <button @click="openDetail2()" class="btn btn-primary">Selengkapnya</button> -->
@@ -220,12 +220,12 @@
             // openDetail(item) {
             //     this.$store.commit('setArticle', item)
             //     this.$router.replace({
-            //         'path': '/detailcase'
+            //         'path': '/detailblog'
             //     })
             // },
             // openDetail2 () {
             //     this.$store.commit('setArticle', this.allblogpopuler)
-            //     this.$router.replace({ 'path': '/detailcase' })
+            //     this.$router.replace({ 'path': '/detailblog' })
             // },
             openDetail2a () {
                 this.$store.commit('setArticle', this.allblogpopuler)
@@ -249,7 +249,7 @@
                     })
                 } else {
                     this.filteredItems = _.filter(this.items, function (v, k) {
-                        return !v.selected && v.judul.toLowerCase().indexOf(searchText.toLowerCase()) > -1
+                        return !v.selected && v.judul.toLowerblog().indexOf(searchText.toLowerblog()) > -1
                     })
                 }
                 this.filteredItems.forEach(function (v, k) {
@@ -314,6 +314,31 @@
 
 
 <style>
+    @media (min-width: 992px){
+        .teks-header-myblog{
+            font-size: 25px !important;
+        }
+        .text-isi-blog-popular{
+            font-size: 17px !important;
+            font-weight: normal !important;
+        }
+        .form-search-portfolio{
+            font-size: 17px !important;
+        }
+    }
+    @media (max-width: 991px){
+        .teks-header-myblog{
+            font-size: 25px !important;
+        }
+        .text-isi-blog-popular{
+            font-size: 17px !important;
+            font-weight: normal !important;
+        }
+        .form-search-portfolio{
+            font-size: 17px !important;
+        }
+    }
+
     .m-pagination{
         margin-bottom:40px;
     }

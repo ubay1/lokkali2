@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     {{-- service worker --}}
-    <script src="{{ asset('manifest/main.js') }}" type="text/javascript"></script>
+    {{-- <script src="{{ asset('manifest/main.js') }}" type="text/javascript"></script> --}}
 
 </head>
 <body>

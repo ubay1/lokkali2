@@ -40,7 +40,7 @@ body {
 @media (min-width: 1600px) {
   .homepage-header-background {
     width: 100%;
-    height: 50em;
+    height: 55em;
     margin-bottom: 50px;
     background-image: url("../img/home_header.png");
     background-size: cover;
@@ -133,7 +133,6 @@ body {
   .homepage-header-background .slide-banner .img-slider {
     width: 75%;
     position: relative;
-    top: -60px;
     right: -120px;
   }
   .about {
@@ -961,7 +960,7 @@ body {
 @media (min-width: 1500px) and (max-width: 1599px) {
   .homepage-header-background {
     width: 100%;
-    height: 50em;
+    height: 55em;
     margin-bottom: 50px;
     background-image: url("../img/home_header.png");
     background-size: cover;
@@ -1054,7 +1053,6 @@ body {
   .homepage-header-background .slide-banner .img-slider {
     width: 80%;
     position: relative;
-    top: -60px;
     right: -90px;
   }
   .about {
@@ -1882,7 +1880,7 @@ body {
 @media (min-width: 1400px) and (max-width: 1499px) {
   .homepage-header-background {
     width: 100%;
-    height: 50em;
+    height: 55em;
     margin-bottom: 50px;
     background-image: url("../img/home_header.png");
     background-size: cover;
@@ -1962,7 +1960,6 @@ body {
   .homepage-header-background .slide-banner .img-slider {
     width: 85%;
     position: relative;
-    top: -60px;
     right: -40px;
   }
   .about {
@@ -2790,7 +2787,7 @@ body {
 @media (min-width: 1300px) and (max-width: 1399px) {
   .homepage-header-background {
     width: 100%;
-    height: 50em;
+    height: 55em;
     margin-bottom: 50px;
     background-image: url("../img/home_header.png");
     background-size: cover;
@@ -2883,7 +2880,6 @@ body {
   .homepage-header-background .slide-banner .img-slider {
     width: 90%;
     position: relative;
-    top: -60px;
     right: 20px;
   }
   .about {
@@ -3711,7 +3707,7 @@ body {
 @media (min-width: 1200px) and (max-width: 1299px) {
   .homepage-header-background {
     width: 100%;
-    height: 50em;
+    height: 53em;
     margin-bottom: 50px;
     background-image: url("../img/home_header.png");
     background-size: cover;
@@ -3798,14 +3794,13 @@ body {
   }
   .homepage-header-background .home-banner .nama-pt {
     padding-left: 50px;
-    margin-top: 170px;
+    margin-top: 150px;
     color: #fff;
     font-size: 17px;
   }
   .homepage-header-background .slide-banner .img-slider {
     width: 90%;
     position: relative;
-    top: -60px;
     right: 20px;
   }
   .about {
@@ -4710,10 +4705,10 @@ body {
   }
   .homepage-header-background .home-banner {
     position: relative;
-    top: 70px;
+    top: 40px;
   }
   .homepage-header-background .home-banner .teks {
-    font-size: 30px;
+    font-size: 25px;
     color: #fff;
     padding-left: 45px;
     line-height: 40px;
@@ -4724,7 +4719,7 @@ body {
     padding-left: 45px;
   }
   .homepage-header-background .home-banner .bg-button-teks .button-teks {
-    font-size: 17px;
+    font-size: 14px;
     padding: 10px;
     color: #fff;
     background: transparent;
@@ -4734,7 +4729,7 @@ body {
   }
   .homepage-header-background .home-banner .nama-pt {
     padding-left: 45px;
-    margin-top: 170px;
+    margin-top: 90px;
     color: #fff;
     font-size: 17px;
   }
@@ -5586,7 +5581,7 @@ body {
 @media (min-width: 768px) and (max-width: 991px) {
   .homepage-header-background {
     width: 100%;
-    height: 40em;
+    height: 53em;
     margin-bottom: 50px;
     background-image: url("../img/home_header.png");
     background-size: cover;
@@ -5647,27 +5642,17 @@ body {
     border-bottom: 3px solid #ffd000;
     color: #49dbd6;
   }
-  .homepage-header-background .home-banner {
-    position: relative;
-    top: 70px;
-    z-index: 1;
-  }
-  .homepage-header-background .home-banner .teks {
-    font-size: 30px;
+  .homepage-header-background .teks {
+    margin-top: 20px;
+    font-size: 20px;
     color: #fff;
     line-height: 40px;
     text-align: center;
-    font-weight: 700;
-    text-shadow: 0px 3px 6px #3ca39c;
   }
-  .homepage-header-background .home-banner .bg-button-teks {
-    margin-top: 30px;
-    color: #fff;
-    text-align: center;
-  }
-  .homepage-header-background .home-banner .bg-button-teks .button-teks {
+  .homepage-header-background .button-teks {
+    margin-top: 10px;
     font-size: 17px;
-    padding: 10px;
+    padding: 5px;
     color: #fff;
     background: transparent;
     border-radius: 20px;
@@ -5675,7 +5660,7 @@ body {
     border: 1px solid #fff;
     background: #3ca39c;
   }
-  .homepage-header-background .home-banner .nama-pt {
+  .homepage-header-background .nama-pt {
     padding-left: 45px;
     margin-top: 170px;
     color: #fff;
@@ -5687,9 +5672,6 @@ body {
   }
   .homepage-header-background .slide-banner .img-slider {
     width: 60%;
-    height: 400px;
-    position: relative;
-    top: -200px;
     z-index: 0;
   }
   .about {
@@ -6546,7 +6528,7 @@ body {
   }
   .homepage-header-background {
     width: 100%;
-    height: 40em;
+    height: 53em;
     margin-bottom: 50px;
     background-image: url("../img/home_header.png");
     background-size: cover;
@@ -6591,27 +6573,17 @@ body {
     border-bottom: 3px solid #ffd000;
     color: #49dbd6;
   }
-  .homepage-header-background .home-banner {
-    position: relative;
-    top: 70px;
-    z-index: 1;
-  }
-  .homepage-header-background .home-banner .teks {
-    font-size: 30px;
+  .homepage-header-background .teks {
+    margin-top: 20px;
+    font-size: 17px;
     color: #fff;
     line-height: 40px;
     text-align: center;
-    font-weight: 700;
-    text-shadow: 0px 3px 6px #3ca39c;
   }
-  .homepage-header-background .home-banner .bg-button-teks {
-    margin-top: 30px;
-    color: #fff;
-    text-align: center;
-  }
-  .homepage-header-background .home-banner .bg-button-teks .button-teks {
-    font-size: 17px;
-    padding: 10px;
+  .homepage-header-background .button-teks {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 5px;
     color: #fff;
     background: transparent;
     border-radius: 20px;
@@ -6619,7 +6591,7 @@ body {
     border: 1px solid #fff;
     background: #3ca39c;
   }
-  .homepage-header-background .home-banner .nama-pt {
+  .homepage-header-background .nama-pt {
     padding-left: 45px;
     margin-top: 170px;
     color: #fff;
@@ -6630,10 +6602,7 @@ body {
     text-align: center;
   }
   .homepage-header-background .slide-banner .img-slider {
-    width: 75%;
-    height: 400px;
-    position: relative;
-    top: -180px;
+    width: 80%;
     z-index: 0;
   }
   .about {
@@ -7498,7 +7467,7 @@ body {
   }
   .homepage-header-background {
     width: 100%;
-    height: 40em;
+    height: 47em;
     margin-bottom: 50px;
     background-image: url("../img/home_header.png");
     background-size: cover;
@@ -7549,27 +7518,17 @@ body {
     border-bottom: 3px solid #ffd000;
     color: #49dbd6;
   }
-  .homepage-header-background .home-banner {
-    position: relative;
-    top: 70px;
-    z-index: 1;
-  }
-  .homepage-header-background .home-banner .teks {
-    font-size: 30px;
+  .homepage-header-background .teks {
+    margin-top: 20px;
+    font-size: 17px;
     color: #fff;
     line-height: 40px;
     text-align: center;
-    font-weight: 700;
-    text-shadow: 0px 3px 6px #3ca39c;
   }
-  .homepage-header-background .home-banner .bg-button-teks {
-    margin-top: 30px;
-    color: #fff;
-    text-align: center;
-  }
-  .homepage-header-background .home-banner .bg-button-teks .button-teks {
-    font-size: 17px;
-    padding: 10px;
+  .homepage-header-background .button-teks {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 5px;
     color: #fff;
     background: transparent;
     border-radius: 20px;
@@ -7577,7 +7536,7 @@ body {
     border: 1px solid #fff;
     background: #3ca39c;
   }
-  .homepage-header-background .home-banner .nama-pt {
+  .homepage-header-background .nama-pt {
     padding-left: 45px;
     margin-top: 170px;
     color: #fff;
@@ -7588,10 +7547,7 @@ body {
     text-align: center;
   }
   .homepage-header-background .slide-banner .img-slider {
-    width: 90%;
-    height: 350px;
-    position: relative;
-    top: -170px;
+    width: 80%;
     z-index: 0;
   }
   .about {
@@ -8455,7 +8411,7 @@ body {
   }
   .homepage-header-background {
     width: 100%;
-    height: 35em;
+    height: 48em;
     background-image: url("../img/home_header.png");
     background-size: cover;
     background-position-y: bottom;
@@ -8505,34 +8461,26 @@ body {
     border-bottom: 3px solid #ffd000;
     color: #49dbd6;
   }
-  .homepage-header-background .home-banner {
-    position: relative;
-    top: 70px;
-    z-index: 1;
-  }
-  .homepage-header-background .home-banner .teks {
-    font-size: 25px;
+  .homepage-header-background .teks {
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 17px;
     color: #fff;
     line-height: 40px;
     text-align: center;
-    font-weight: 700;
-    text-shadow: 0px 3px 6px #3ca39c;
   }
-  .homepage-header-background .home-banner .bg-button-teks {
-    margin-top: 30px;
+  .homepage-header-background .button-teks {
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 5px;
     color: #fff;
-    text-align: center;
-  }
-  .homepage-header-background .home-banner .bg-button-teks .button-teks {
-    font-size: 17px;
-    padding: 10px;
-    color: #fff;
+    background: transparent;
     border-radius: 20px;
     font-weight: bold;
     border: 1px solid #fff;
     background: #3ca39c;
   }
-  .homepage-header-background .home-banner .nama-pt {
+  .homepage-header-background .nama-pt {
     padding-left: 45px;
     margin-top: 170px;
     color: #fff;
@@ -8544,9 +8492,6 @@ body {
   }
   .homepage-header-background .slide-banner .img-slider {
     width: 90%;
-    height: 300px;
-    position: relative;
-    top: -170px;
     z-index: 0;
   }
   .about {

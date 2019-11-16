@@ -161,6 +161,7 @@
 <script>
     // var SITEURL = '{{URL::to('')}}';
     var api = "{{ env('API_URL') }}";
+    console.log(api);
     $(document).ready(function () {
         $.ajaxSetup({
             headers: {

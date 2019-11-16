@@ -85,7 +85,7 @@ class BlogController extends Controller
 
         if ($images != '') {
             $rules = array(
-                'teks_header2'=>'required',
+                // 'teks_header2'=>'required',
                 'gambarbaru' => 'required',
                 'judul2' => 'required',
                 'isi2' => 'required'
@@ -119,7 +119,7 @@ class BlogController extends Controller
         }
         else{
             $rules = array(
-                'teks_header2' => 'required',
+                // 'teks_header2' => 'required',
                 'judul2' => 'required',
                 'isi2' => 'required'
             );
@@ -133,7 +133,7 @@ class BlogController extends Controller
             }
 
             $form_data = array(
-                'header' => $request->teks_header2,
+                // 'header' => $request->teks_header2,
                 'judul' => $request->judul2,
                 'isi' => $request->isi2,
                 'updated_at' => Carbon::now('Asia/Jakarta')->format('Y-m-d H:i:s')
