@@ -153,10 +153,9 @@ import Footer from '../components/Footer'
     }
 
     @media (min-width:992px){
-        .bg-form-service-email-contact{
-            /* margin-right: 100px !important;
-            margin-left: 100px !important; */
-        }
+        /* .bg-form-service-email-contact{ */
+
+        /* } */
         .teks-header-simply{
             font-size: 25px !important;
         }
