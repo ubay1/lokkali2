@@ -53,10 +53,8 @@ export default {
         font-family: inherit;
         font-size: 30pt;
         text-align: center;
-        background: #14a6cb;
-        color: white;
+        color: black;
         padding: 10px;
-        text-shadow: 0px 2px 4px #0d2228;
     }
     .isi{
         font-family: inherit;

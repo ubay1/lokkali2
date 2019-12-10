@@ -89,7 +89,7 @@ class ServiceController extends Controller
             $objDemo->picked =  $picked;
             $objDemo->message =  $message;
 
-            Mail::to("lokkaliindo@gmail.com")->send(new SendEmail($objDemo));
+            Mail::to("info@lokkali.co.id")->send(new SendEmail($objDemo));
 
             return response()->json([
                 'message'    => 'terima kasih atas partisipasinya',

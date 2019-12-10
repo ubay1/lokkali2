@@ -3,16 +3,6 @@
         <div class="footer">
             <div class="container">
                 <div class="teks-judul-footer">
-                    <div class="text-center">
-                        <span class="followus">
-                            Follow Us
-                        </span>
-                        <div class="container d-flex justify-content-center p-2">
-                            <img class="img-fluid icon-sosmed"  src="../../img/icon-ig.png" alt="">
-                            <img class="img-fluid icon-sosmed"  src="../../img/icon-in.png" alt="">
-                            <img class="img-fluid icon-sosmed"  src="../../img/icon-fb.png" alt="">
-                        </div>
-                    </div>
                     <div class="footer-brand">
                         <span class="copyright">
                             copyright@Lokkali 2019
@@ -27,6 +17,16 @@
                             Gedung Menara 165 Suite Office,  <br>
                             Lantai 2 & 4, Jl. TB Simatupang Kav. 1
                         </span>
+                    </div> <br><br>
+                    <div class="text-center">
+                        <span class="followus">
+                            Follow Us
+                        </span>
+                        <div class="container d-flex justify-content-center p-2">
+                            <img class="img-fluid icon-sosmed"  src="../../img/fb.png" alt="">
+                            <img class="img-fluid icon-sosmed"  src="../../img/linkin.png" alt="">
+                            <img class="img-fluid icon-sosmed"  src="../../img/ig.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>

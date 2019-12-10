@@ -51,7 +51,7 @@ class ContactController extends Controller
             'email' => 'required',
             'subject' => 'required',
             'message' => 'required',
-            'file'=>'required|mimes:pdf|max:10000'
+            'file'=>'required|mimes:pdf,jpeg,jpg,png,docx,doc|max:10000'
         ]);
 
         if($validator->fails()){
@@ -117,7 +117,7 @@ class ContactController extends Controller
             $objDemo->message =  $message;
             $objDemo->file    =  $file;
 
-            Mail::to("lokkaliindo@gmail.com")->send(new SendEmailContact($objDemo));
+            Mail::to("info@lokkali.co.id")->send(new SendEmailContact($objDemo));
 
             return response()->json([
                 'message'    => 'terima kasih atas partisipasinya',

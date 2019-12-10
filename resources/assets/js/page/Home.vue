@@ -6,7 +6,7 @@
 
             <div class="bg-banner">
                 <!-- carousel pc -->
-                    <carousel :loop="true" :autoplay="true" :autoplayTimeout="5000" :perPage="1" class="caro-list-jumbotron-pc">
+                    <carousel :loop="true" :navigationEnabled="true" :navigation-next-label="navigationNext" :navigation-prev-label="navigationPrev" :autoplay="true" :autoplayTimeout="5000" :perPage="1" class="caro-list-jumbotron-pc">
                         <slide>
                             <div class="row">
                                 <div class="col-lg-5 col-xl-5 col-md-12 home-banner">
@@ -76,7 +76,7 @@
                     </carousel>
                 <!-- end -->
                 <!-- carousel smartphone -->
-                    <carousel :loop="true" :autoplay="true" :autoplayTimeout="5000" :perPage="1" class="caro-list-jumbotron-smartphone">
+                    <carousel :loop="true" :navigationEnabled="true" :navigation-next-label="navigationNext" :navigation-prev-label="navigationPrev" :autoplay="true" :autoplayTimeout="3000" :perPage="1" class="caro-list-jumbotron-smartphone">
                         <slide>
                             <div class="slide-banner">
                                 <img class="img-slider"  src="../../img/slide_banner.png" alt="">
@@ -229,7 +229,7 @@
             </div>
 
             <!-- carousel -->
-            <carousel :loop="true" :autoplay="true" :autoplayTimeout="5000" :perPage="1" class="caro-list">
+            <carousel :loop="true" :autoplay="true" :autoplayTimeout="3000" :perPage="1" class="caro-list">
                 <slide v-for="(data, index) in visimisi" :key="index" >
                     <div class=" container text-center">
                         <img :src="data.gambar" alt="" class="img-fluid">
@@ -265,6 +265,10 @@ import { Carousel, Slide } from 'vue-carousel';
                     "http://localhost:8000/uploads/visimisi/828147914203aa764a2a1107ef1b8d61bee5ab1f6.png",
                 ]
             }
+        },
+        computed: {
+            navigationNext: function() { return `<i class="fas fa-chevron-right fa-2x"></i>` },
+            navigationPrev: function() { return `<i class="fas fa-chevron-left fa-2x"></i>` },
         },
         components:{
             Menu, Footer, Carousel, Slide
@@ -352,5 +356,14 @@ import { Carousel, Slide } from 'vue-carousel';
     }
     .VueCarousel-dot--active{
         background-color: rgb(0, 0, 0) !important;
+    }
+    .VueCarousel-navigation-next{
+        margin-right: 70px !important;
+    }
+    .VueCarousel-navigation-prev{
+        margin-left: 70px !important;
+    }
+    .fa-2x{
+        color: white;
     }
 </style>

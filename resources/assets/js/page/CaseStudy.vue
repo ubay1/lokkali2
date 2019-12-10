@@ -17,27 +17,27 @@
         <!-- modal -->
         <div v-if="showModal">
         <transition name="modal">
-        <div class="modal">
-            <div class="modal-wrapper">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <img class="modal-title img-fluid img-header" id="exampleModalLabel" :src="statearticle.gambar" alt="Card image cap">
-                    <button type="button" @click="hideModal" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <h5 class="title">{{ statearticle.judul }}</h5>
-                    <p class="isi">{{ statearticle.isi }}</p>
-                </div>
-                <div class="modal-footer">
-                     <button type="button" @click="hideModal" class=" btn btn-danger" data-dismiss="modal" aria-label="Close">CLose </button>
+            <div class="modal">
+                <div class="modal-wrapper">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <img class="modal-title img-fluid img-header" id="exampleModalLabel" :src="statearticle.gambar" alt="Card image cap">
+                        <button type="button" @click="hideModal" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="title">{{ statearticle.judul }}</h5>
+                        <p class="isi">{{ statearticle.isi }}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" @click="hideModal" class=" btn btn-danger" data-dismiss="modal" aria-label="Close">CLose </button>
+                    </div>
+                    </div>
                 </div>
                 </div>
             </div>
-            </div>
-        </div>
         </transition>
         </div>
 
@@ -89,7 +89,7 @@
                 <ul class="pagination">
                     <li class="page-item">
                         <a class="page-link" v-on:click="selectPage(paginationItems[0])"
-                            v-bind:class="{'disabled': this.pagination.currentPage==this.paginationItems[0] || this.paginationItems.length==0}">
+                            v-bind:class="{'disabledbutton-pagination': this.pagination.currentPage==this.paginationItems[0] || this.paginationItems.length==0}">
                             First
                         </a>
                     </li>
@@ -97,13 +97,13 @@
 
                     <li class="page-item" v-for="(item,index) in paginationItems" :key="index">
                         <a class="page-link" v-on:click="selectPage(item)"
-                            v-bind:class="{'is-info': item == pagination.currentPage}">{{item | numeral}}</a>
+                            v-bind:class="{'activebutton-pagination': item == pagination.currentPage}">{{item | numeral}}</a>
                     </li>
 
                     <li class="is-space"></li>
                     <li class="page-item">
-                        <a class="page-link" v-on:click="selectPage(paginationItems[paginationItems.length-1])"
-                            v-bind:class="{'disabled': this.pagination.currentPage==this.paginationItems[this.paginationItems.length-1] || this.paginationItems.length==0}">
+                        <a class="page-link"  v-on:click="selectPage(paginationItems[paginationItems.length-1])"
+                            v-bind:class="{'disabledbutton-pagination': this.pagination.currentPage==this.paginationItems[this.paginationItems.length-1] || this.paginationItems.length==0}">
                             Last
                         </a>
                     </li>
@@ -217,21 +217,12 @@
 
         },
         methods: {
-            // openDetail(item) {
-            //     this.$store.commit('setArticle', item)
-            //     this.$router.replace({
-            //         'path': '/detailcase'
-            //     })
-            // },
-            // openDetail2 () {
-            //     this.$store.commit('setArticle', this.allcasepopuler)
-            //     this.$router.replace({ 'path': '/detailcase' })
-            // },
             openDetail2a () {
                 this.$store.commit('setArticle', this.allcasepopuler)
                 this.showModal = true;
             },
             openDetail2b (item) {
+                console.log(item);
                 this.$store.commit('setArticle', item)
                 this.showModal = true;
             },
@@ -271,14 +262,16 @@
                 if (this.pagination.currentPage < this.pagination.range - 2) {
                     start = 1
                     end = start + this.pagination.range - 1
-                } else if (this.pagination.currentPage <= this.paginationItems.length && this.pagination.currentPage >
-                    this.paginationItems.length - this.pagination.range + 2) {
+                    console.log('page '+start)
+                } else if (this.pagination.currentPage <= this.paginationItems.length && this.pagination.currentPage > this.paginationItems.length - this.pagination.range + 2) {
                     start = this.paginationItems.length - this.pagination.range + 1
-                    end = this.paginationItems.length
+                    end   = this.paginationItems.length
+                    console.log('page '+start)
                 } else {
                     start = this.pagination.currentPage - 2
-                    end = this.pagination.currentPage + 2
+                    end   = this.pagination.currentPage + 2
                 }
+
                 if (start < 1) {
                     start = 1
                 }
@@ -290,16 +283,6 @@
                 for (var i = start; i <= end; i++) {
                     this.pagination.filteredItems.push(i);
                 }
-            },
-            selectItem(item) {
-                item.selected = true
-                this.selectedItems.push(item)
-                this.searchInTheList(this.searchItem, this.pagination.currentPage)
-            },
-            removeSelectedItem(item) {
-                item.selected = false
-                this.selectedItems.$remove(item)
-                this.searchInTheList(this.searchItem, this.pagination.currentPage)
             }
         },
         filters:{
@@ -372,6 +355,7 @@
     .card-text {
         height: 100px !important;
         overflow: hidden;
+        text-align: justify;
     }
 
     /* form search */
@@ -398,14 +382,31 @@
     }
 
     .modal-header .close{
-        padding: 5px;
+        padding: 1px;
         margin: -1rem;
-        background: red;
+        background: white;
         opacity: 1 !important;
     }
     .modal-wrapper {
         /* display: table-cell; */
         vertical-align: middle;
+    }
+
+    .disabledbutton-pagination{
+        background: #cacaca;
+        color: #8a8a8a !important;
+        opacity: .5;
+    }
+    .activebutton-pagination{
+        background: #3490dc;
+        color: #fff !important;
+    }
+    .page-link:hover {
+        z-index: 2;
+        color: #1d68a7;
+        text-decoration: none;
+        background-color: unset;
+        border-color: #dee2e6;
     }
 
 </style>

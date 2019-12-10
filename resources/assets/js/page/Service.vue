@@ -331,7 +331,9 @@
 
 
     .list-group-item.active {
-        background-color: #ff4646 !important
+            color: #ff4646 !important;
+        background: #e4e2e2 !important;
+        border: 3px solid orange;
     }
 
     .col-lg-4 {

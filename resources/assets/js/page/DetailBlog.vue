@@ -47,24 +47,4 @@ export default {
         width: 100%;
         object-position: center;
     }
-    .title{
-        margin-bottom: 0px;
-        font-family: inherit;
-        font-size: 30pt;
-        text-align: center;
-        background: #14a6cb;
-        color: white;
-        padding: 10px;
-        text-shadow: 0px 2px 4px #0d2228;
-    }
-    .isi{
-        font-family: inherit;
-        font-size: medium;
-        line-height: 30px;
-        text-indent: 20px;
-        text-align: justify;
-        padding: 20px;
-        height: auto;
-        background: white;
-    }
 </style>

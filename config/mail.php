@@ -29,7 +29,9 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+    // 'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+
+    'host' => env('MAIL_HOST', 'mail.lokkali.co.id'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,6 +58,8 @@ return [
     */
 
     'from' => [
+        // 'address' => env('MAIL_FROM_ADDRESS', 'notreply182@gmail.com'),
+        // 'name' => env('MAIL_FROM_NAME', 'Lokkali'),
         'address' => env('MAIL_FROM_ADDRESS', 'notreply182@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'Lokkali'),
     ],
@@ -84,9 +88,10 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME', 'lokkaliindo@gmail.com'),
-
-    'password' => env('MAIL_PASSWORD', '@Lokkali182'),
+    // 'username' => env('MAIL_USERNAME', 'lokkaliindo@gmail.com'),
+    // 'password' => env('MAIL_PASSWORD', '@Lokkali182'),
+    'username' => env('MAIL_USERNAME', 'info@lokkali.co.id'),
+    'password' => env('MAIL_PASSWORD', '?BG}lokkaliindo123'),
 
     /*
     |--------------------------------------------------------------------------

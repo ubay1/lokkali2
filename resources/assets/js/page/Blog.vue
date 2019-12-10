@@ -89,7 +89,7 @@
                 <ul class="pagination">
                     <li class="page-item">
                         <a class="page-link" v-on:click="selectPage(paginationItems[0])"
-                            v-bind:class="{'disabled': this.pagination.currentPage==this.paginationItems[0] || this.paginationItems.length==0}">
+                            v-bind:class="{'disabledbutton-pagination': this.pagination.currentPage==this.paginationItems[0] || this.paginationItems.length==0}">
                             First
                         </a>
                     </li>
@@ -97,13 +97,13 @@
 
                     <li class="page-item" v-for="(item,index) in paginationItems" :key="index">
                         <a class="page-link" v-on:click="selectPage(item)"
-                            v-bind:class="{'is-info': item == pagination.currentPage}">{{item | numeral}}</a>
+                            v-bind:class="{'activebutton-pagination': item == pagination.currentPage}">{{item | numeral}}</a>
                     </li>
 
                     <li class="is-space"></li>
                     <li class="page-item">
                         <a class="page-link" v-on:click="selectPage(paginationItems[paginationItems.length-1])"
-                            v-bind:class="{'disabled': this.pagination.currentPage==this.paginationItems[this.paginationItems.length-1] || this.paginationItems.length==0}">
+                            v-bind:class="{'disabledbutton-pagination': this.pagination.currentPage==this.paginationItems[this.paginationItems.length-1] || this.paginationItems.length==0}">
                             Last
                         </a>
                     </li>
@@ -379,16 +379,26 @@
     .modal-dialog{
         max-width: 700px !important;
     }
-
-    .modal-header .close{
-        padding: 5px;
-        margin: -1rem;
-        background: red;
-        opacity: 1 !important;
-    }
     .modal-wrapper {
         /* display: table-cell; */
         vertical-align: middle;
+    }
+
+    .disabledbutton-pagination{
+        background: #cacaca;
+        color: #8a8a8a !important;
+        opacity: .5;
+    }
+    .activebutton-pagination{
+        background: #3490dc;
+        color: #fff !important;
+    }
+    .page-link:hover {
+        z-index: 2;
+        color: #1d68a7;
+        text-decoration: none;
+        background-color: unset;
+        border-color: #dee2e6;
     }
 
 </style>
