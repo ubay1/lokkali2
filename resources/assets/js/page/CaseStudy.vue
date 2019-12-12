@@ -31,9 +31,9 @@
                         <h5 class="title">{{ statearticle.judul }}</h5>
                         <p class="isi">{{ statearticle.isi }}</p>
                     </div>
-                    <div class="modal-footer">
+                    <!-- <div class="modal-footer">
                         <button type="button" @click="hideModal" class=" btn btn-danger" data-dismiss="modal" aria-label="Close">CLose </button>
-                    </div>
+                    </div> -->
                     </div>
                 </div>
                 </div>
